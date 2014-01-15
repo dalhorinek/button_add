@@ -5,4 +5,8 @@ module ButtonAdd
       ActionView::Base.send :include, ViewHelpers
     end
   end
+
+  class Engine < Rails::Engine 
+
+  end
 end
