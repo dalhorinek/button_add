@@ -1,0 +1,1 @@
+require 'button_add/railtie' if defined?(Rails)
