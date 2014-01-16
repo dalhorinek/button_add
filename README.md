@@ -1,6 +1,6 @@
 # ButtonAdd
 
-TODO: Write a gem description
+JavaScript Button add for dynamic forms as shown in RailsCasts (403 - dynamic forms)
 
 ## Installation
 
@@ -18,7 +18,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your application.js add 
+
+    //= require button_add
+
+In your view 
+
+        <%= link_to_js_add "Add", f, :association_name %> </th>
+
+        <%= f.fields_for :association_name do |builder| %>
+          <%= render partial: 'association_name_fields', locals: { f: builder } %>
+        <% end %>
+
+Synopis 
+
+    link_to_js_add button_name, form, association_name, options = {} 
+
+Possible options 
+
+    partial: "name_of_your_partial_file.html"
+      default value is "association_name_fields.html"
+
+    link_options: { ... options passed to link_to helper }
+
+    locals: { ... some extra locals passwd to partial }
 
 ## Contributing
 
