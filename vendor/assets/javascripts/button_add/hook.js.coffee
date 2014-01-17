@@ -1,6 +1,6 @@
 jQuery ->
     $("form.dynamic").on 'click', '.remove-button', (event) -> 
-        $row = $(this).closest('.row')
+        $row = $(this).closest('.dynamic-row')
         $row.find("input[type=hidden]").val(1);
         $row.hide()
         
