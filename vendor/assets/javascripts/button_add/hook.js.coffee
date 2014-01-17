@@ -1,6 +1,6 @@
 jQuery ->
     $("form.dynamic").on 'click', '.remove-button', (event) -> 
-        $row = $(this).closest('tr')
+        $row = $(this).closest('.row')
         $row.find("input[type=hidden]").val(1);
         $row.hide()
         
@@ -12,5 +12,5 @@ jQuery ->
         time = new Date().getTime()
         regexp = new RegExp($t.data('id'), 'g')
 
-        $t.closest('table').append($t.data('fields').replace(regexp, time))
+        $t.closest('.dynamic-container').append($t.data('fields').replace(regexp, time))
         event.preventDefault()

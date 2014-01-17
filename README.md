@@ -30,9 +30,12 @@ In your view
           <%= render partial: 'association_name_fields', locals: { f: builder } %>
         <% end %>
 
+It clones closest element with row class and appends it to closest element with class dynamic-container 
+
 Synopis 
 
     link_to_js_add button_name, form, association_name, options = {} 
+
 
 Possible options 
 
