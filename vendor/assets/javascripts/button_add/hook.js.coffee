@@ -12,5 +12,9 @@ jQuery ->
         time = new Date().getTime()
         regexp = new RegExp($t.data('id'), 'g')
 
-        $t.closest('.dynamic-container').append($t.data('fields').replace(regexp, time))
+        $container = $t.closest('.dynamic-container');
+
+        $container.append($t.data('fields').replace(regexp, time))
+        $container.trigger 'row:add'
+
         event.preventDefault()
